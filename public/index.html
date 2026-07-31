@@ -131,13 +131,22 @@
             </div>
 
             <div class="select-row">
-              <label for="meals">1日の食事回数</label>
-              <select id="meals" name="meals">
-                <option value="1">1回</option>
-                <option value="2" selected>2回</option>
-                <option value="3">3回</option>
+              <label for="bowls-per-person">1人1日のご飯量</label>
+              <select id="bowls-per-person" name="bowlsPerPerson">
+                <option value="1">少なめ（茶碗1杯）</option>
+                <option value="1.5" selected>標準（茶碗1.5杯）</option>
+                <option value="2">多め（茶碗2杯）</option>
               </select>
             </div>
+
+            <div class="select-row price-row">
+              <label for="price-per-5kg">5kgの価格</label>
+              <div class="price-control">
+                <input id="price-per-5kg" name="pricePer5kg" type="number" value="3373" min="1" max="100000" step="1" inputmode="numeric">
+                <span>円</span>
+              </div>
+            </div>
+            <p class="price-source">初期値：全国スーパー平均 <strong>3,373円</strong>（税込・2026年7月24日公表）</p>
 
             <p class="form-error" role="alert" hidden data-form-error></p>
             <button class="calculate-button" type="submit">必要量を計算する</button>
@@ -146,18 +155,33 @@
           <div class="calculator-result" aria-live="polite" aria-atomic="true" data-result>
             <div class="result-main">
               <span data-result-period>30日間の目安</span>
-              <p><small>約</small> <strong data-result-kg>21.6</strong><b>kg</b></p>
+              <p><small>約</small> <strong data-result-kg>11.7</strong><b>kg</b></p>
+              <small class="daily-bowls">家族で1日 <strong data-result-daily-bowls>6杯</strong></small>
             </div>
             <div class="result-bags">
-              <p>5kg袋なら<br><strong><span data-result-bags>5</span>袋</strong>が購入目安です</p>
+              <p>5kg袋なら<br><strong><span data-result-bags>3</span>袋</strong>が購入目安です</p>
               <span class="mini-rice-bag" aria-hidden="true">5kg</span>
             </div>
             <div class="result-cost">
-              <span>概算費用</span>
-              <strong data-result-cost>19,440円</strong>
+              <span>購入費用の目安</span>
+              <strong data-result-cost>10,119円</strong>
             </div>
-            <p class="result-note">※お米1kgあたり900円で計算</p>
+            <p class="result-note">※5kg袋を必要数購入した場合で計算</p>
           </div>
+
+          <details class="calculation-basis">
+            <summary>計算根拠を見る</summary>
+            <div class="basis-content">
+              <p><strong>必要量</strong><span data-result-formula>4人 × 1日1.5杯 × 30日 × 生米65g</span></p>
+              <p><strong>購入費用</strong><span data-result-price-formula>3袋 × 3,373円</span></p>
+              <ul>
+                <li>茶碗1杯（炊いたご飯約150g）を、生米約65gとして計算します。</li>
+                <li>大人・子どもとも1人として計算します。実際の食事量に合わせて「少なめ・標準・多め」を調整してください。</li>
+                <li>初期価格は農林水産省が2026年7月24日に公表した、2026年7月13日〜19日の全国約1,000店舗の平均価格です。</li>
+              </ul>
+              <a href="https://www.maff.go.jp/j/nousan/kokumotu/kome_kakaku.html" target="_blank" rel="noopener noreferrer">農林水産省の米価格情報を見る</a>
+            </div>
+          </details>
         </div>
       </div>
     </section>

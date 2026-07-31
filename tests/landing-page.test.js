@@ -29,7 +29,11 @@ test('お米計算フォームがアクセシブルな入力と結果領域を�
   assert.match(html, /name="adults"/);
   assert.match(html, /name="children"/);
   assert.match(html, /name="days"/);
-  assert.match(html, /name="meals"/);
+  assert.match(html, /name="bowlsPerPerson"/);
+  assert.match(html, /name="pricePer5kg"/);
+  assert.match(html, /3,373円/);
+  assert.match(html, /2026年7月24日公表/);
+  assert.match(html, /計算根拠/);
   assert.match(html, /aria-live="polite"/);
   assert.match(html, /type="module" src="\/assets\/app\.js"/);
 });

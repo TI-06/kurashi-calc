@@ -6,6 +6,9 @@ const resultPeriod = document.querySelector('[data-result-period]');
 const resultKg = document.querySelector('[data-result-kg]');
 const resultBags = document.querySelector('[data-result-bags]');
 const resultCost = document.querySelector('[data-result-cost]');
+const resultDailyBowls = document.querySelector('[data-result-daily-bowls]');
+const resultFormula = document.querySelector('[data-result-formula]');
+const resultPriceFormula = document.querySelector('[data-result-price-formula]');
 const menuButton = document.querySelector('[data-menu-button]');
 const mobileMenu = document.querySelector('[data-mobile-menu]');
 const toast = document.querySelector('[data-toast]');
@@ -17,7 +20,8 @@ function readCalculatorValues() {
     adults: Number(formData.get('adults')),
     children: Number(formData.get('children')),
     days: Number(formData.get('days')),
-    meals: Number(formData.get('meals')),
+    bowlsPerPerson: Number(formData.get('bowlsPerPerson')),
+    pricePer5kg: Number(formData.get('pricePer5kg')),
   };
 }
 
@@ -36,6 +40,9 @@ function renderResult({ focus = false } = {}) {
     resultKg.textContent = viewModel.kilogramsText;
     resultBags.textContent = viewModel.bagCountText;
     resultCost.textContent = viewModel.costText;
+    resultDailyBowls.textContent = viewModel.dailyBowlsText;
+    resultFormula.textContent = viewModel.formulaText;
+    resultPriceFormula.textContent = viewModel.priceFormulaText;
     errorElement.hidden = true;
     errorElement.textContent = '';
 
