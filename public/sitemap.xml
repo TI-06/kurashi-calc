@@ -1,9 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://kurashi-calc.workers.dev/</loc>
-    <lastmod>2026-07-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-</urlset>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://kurashi-calc.workers.dev/</loc><lastmod>2026-07-31</lastmod></url><url><loc>https://kurashi-calc.workers.dev/tools/</loc><lastmod>2026-07-31</lastmod></url><url><loc>https://kurashi-calc.workers.dev/categories/</loc><lastmod>2026-07-31</lastmod></url><url><loc>https://kurashi-calc.workers.dev/articles/</loc><lastmod>2026-07-31</lastmod></url><url><loc>https://kurashi-calc.workers.dev/search/</loc><lastmod>2026-07-31</lastmod></url><url><loc>https://kurashi-calc.workers.dev/about/</loc><lastmod>2026-07-31</lastmod></url><url><loc>https://kurashi-calc.workers.dev/contact/</loc><lastmod>2026-07-31</lastmod></url><url><loc>https://kurashi-calc.workers.dev/privacy/</loc><lastmod>2026-07-31</lastmod></url><url><loc>https://kurashi-calc.workers.dev/terms/</loc><lastmod>2026-07-31</lastmod></url><url><loc>https://kurashi-calc.workers.dev/tools/rice/</loc><lastmod>2026-07-31</lastmod></url><url><loc>https://kurashi-calc.workers.dev/tools/electricity/</loc><lastmod>2026-07-31</lastmod></url><url><loc>https://kurashi-calc.workers.dev/tools/pool-water/</loc><lastmod>2026-07-31</lastmod></url><url><loc>https://kurashi-calc.workers.dev/tools/disaster-stockpile/</loc><lastmod>2026-07-31</lastmod></url><url><loc>https://kurashi-calc.workers.dev/articles/rice-monthly-guide/</loc><lastmod>2026-07-31</lastmod></url><url><loc>https://kurashi-calc.workers.dev/articles/electricity-cost-guide/</loc><lastmod>2026-07-31</lastmod></url><url><loc>https://kurashi-calc.workers.dev/articles/pool-water-cost-guide/</loc><lastmod>2026-07-31</lastmod></url><url><loc>https://kurashi-calc.workers.dev/articles/disaster-stockpile-guide/</loc><lastmod>2026-07-31</lastmod></url></urlset>
