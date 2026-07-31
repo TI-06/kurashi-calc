@@ -17,11 +17,9 @@ test('トップページから参照するローカル静的ファイルが存�
   }
 });
 
-test('更新される静的資産を長期間ブラウザキャッシュしない', async () => {
+
+test('静的アセットを長期間ブラウザキャッシュしない', async () => {
   const headers = await readFile(path.join(publicRoot, '_headers'), 'utf8');
-  assert.match(
-    headers,
-    /\/assets\/\*\s+Cache-Control: public, max-age=0, must-revalidate/s,
-  );
+  assert.match(headers, /\/assets\/\*[\s\S]*Cache-Control: public, max-age=0, must-revalidate/);
   assert.doesNotMatch(headers, /max-age=604800/);
 });

@@ -15,6 +15,7 @@
   <link rel="canonical" href="https://kurashi-calc.workers.dev/">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/styles.css">
+  <script type="module" src="/assets/common.js"></script>
   <script type="module" src="/assets/app.js"></script>
 </head>
 <body>
@@ -28,14 +29,14 @@
       </a>
 
       <nav class="desktop-nav" aria-label="メインナビゲーション">
-        <a href="#popular-tools">計算ツール</a>
-        <a href="#categories">カテゴリ <span aria-hidden="true">⌄</span></a>
-        <a href="#articles">お役立ち記事</a>
-        <a href="#how-it-works">使い方</a>
-        <a href="#trust">運営者について</a>
+        <a data-nav-link href="/tools/">計算ツール</a>
+        <a data-nav-link href="/categories/">カテゴリ</a>
+        <a data-nav-link href="/articles/">お役立ち記事</a>
+        <a data-nav-link href="/about/#how-to-use">使い方</a>
+        <a data-nav-link href="/about/">運営者について</a>
       </nav>
 
-      <form class="site-search" role="search" data-search-form>
+      <form class="site-search" role="search" action="/search/" method="get">
         <label class="sr-only" for="site-search-input">サイト内検索</label>
         <input id="site-search-input" name="q" type="search" placeholder="キーワードで検索" autocomplete="off">
         <button type="submit" aria-label="検索する">
@@ -51,12 +52,12 @@
     </div>
 
     <nav id="mobile-menu" class="mobile-menu" aria-label="スマートフォン用ナビゲーション" hidden data-mobile-menu>
-      <a href="#popular-tools">計算ツール</a>
-      <a href="#categories">カテゴリ</a>
-      <a href="#articles">お役立ち記事</a>
-      <a href="#how-it-works">使い方</a>
-      <a href="#trust">運営者について</a>
-      <form class="mobile-search" role="search" data-search-form>
+      <a href="/tools/">計算ツール</a>
+      <a href="/categories/">カテゴリ</a>
+      <a href="/articles/">お役立ち記事</a>
+      <a href="/about/#how-to-use">使い方</a>
+      <a href="/about/">運営者について</a>
+      <form class="mobile-search" role="search" action="/search/" method="get">
         <label class="sr-only" for="mobile-search-input">サイト内検索</label>
         <input id="mobile-search-input" name="q" type="search" placeholder="キーワードで検索">
         <button type="submit" aria-label="検索する">
@@ -190,12 +191,12 @@
       <div class="container">
         <div class="section-heading-row">
           <h2>今よく使われている計算</h2>
-          <a class="text-link" href="#categories">すべて見る
+          <a class="text-link" href="/tools/">すべて見る
             <svg aria-hidden="true"><use href="/assets/icons.svg#arrow-right"></use></svg>
           </a>
         </div>
         <div class="tool-grid">
-          <a class="tool-card" href="#rice-calculator">
+          <a class="tool-card" href="/tools/rice/">
             <span class="tag tag-green">人気</span>
             <span class="tool-icon rice"><svg aria-hidden="true"><use href="/assets/icons.svg#rice"></use></svg></span>
             <h3>家族のお米必要量</h3>
@@ -204,7 +205,7 @@
             <span class="round-arrow" aria-hidden="true"><svg><use href="/assets/icons.svg#arrow-right"></use></svg></span>
           </a>
 
-          <a class="tool-card" href="#articles">
+          <a class="tool-card" href="/tools/electricity/">
             <span class="tag tag-orange">人気</span>
             <span class="tool-icon bulb"><svg aria-hidden="true"><use href="/assets/icons.svg#bulb"></use></svg></span>
             <h3>電気代の目安計算</h3>
@@ -213,7 +214,7 @@
             <span class="round-arrow" aria-hidden="true"><svg><use href="/assets/icons.svg#arrow-right"></use></svg></span>
           </a>
 
-          <a class="tool-card" href="#articles">
+          <a class="tool-card" href="/tools/pool-water/">
             <span class="tag tag-blue">夏におすすめ</span>
             <span class="tool-icon pool"><svg aria-hidden="true"><use href="/assets/icons.svg#pool"></use></svg></span>
             <h3>プールの水道代計算</h3>
@@ -222,7 +223,7 @@
             <span class="round-arrow" aria-hidden="true"><svg><use href="/assets/icons.svg#arrow-right"></use></svg></span>
           </a>
 
-          <a class="tool-card" href="#categories">
+          <a class="tool-card" href="/tools/disaster-stockpile/">
             <span class="tag tag-green">人気</span>
             <span class="tool-icon backpack"><svg aria-hidden="true"><use href="/assets/icons.svg#backpack"></use></svg></span>
             <h3>防災備蓄の目安計算</h3>
@@ -242,13 +243,13 @@
       <div class="container">
         <h2>目的から探す</h2>
         <div class="category-grid">
-          <a href="#popular-tools"><span><svg aria-hidden="true"><use href="/assets/icons.svg#rice"></use></svg></span>食費・食材</a>
-          <a href="#popular-tools"><span><svg aria-hidden="true"><use href="/assets/icons.svg#bottle"></use></svg></span>飲み物</a>
-          <a href="#popular-tools"><span><svg aria-hidden="true"><use href="/assets/icons.svg#bulb"></use></svg></span>光熱費</a>
-          <a href="#popular-tools"><span><svg aria-hidden="true"><use href="/assets/icons.svg#backpack"></use></svg></span>防災</a>
-          <a href="#articles"><span><svg aria-hidden="true"><use href="/assets/icons.svg#child"></use></svg></span>子育て</a>
-          <a href="#articles"><span><svg aria-hidden="true"><use href="/assets/icons.svg#umbrella"></use></svg></span>季節行事</a>
-          <a href="#articles"><span><svg aria-hidden="true"><use href="/assets/icons.svg#house"></use></svg></span>住まい・引越し</a>
+          <a href="/tools/rice/"><span><svg aria-hidden="true"><use href="/assets/icons.svg#rice"></use></svg></span>食費・食材</a>
+          <a href="/categories/"><span><svg aria-hidden="true"><use href="/assets/icons.svg#bottle"></use></svg></span>飲み物</a>
+          <a href="/tools/electricity/"><span><svg aria-hidden="true"><use href="/assets/icons.svg#bulb"></use></svg></span>光熱費</a>
+          <a href="/tools/disaster-stockpile/"><span><svg aria-hidden="true"><use href="/assets/icons.svg#backpack"></use></svg></span>防災</a>
+          <a href="/categories/"><span><svg aria-hidden="true"><use href="/assets/icons.svg#child"></use></svg></span>子育て</a>
+          <a href="/tools/pool-water/"><span><svg aria-hidden="true"><use href="/assets/icons.svg#umbrella"></use></svg></span>季節行事</a>
+          <a href="/categories/"><span><svg aria-hidden="true"><use href="/assets/icons.svg#house"></use></svg></span>住まい・引越し</a>
         </div>
       </div>
     </section>
@@ -292,29 +293,12 @@
 
     <section id="articles" class="section articles-section">
       <div class="container">
-        <div class="section-heading-row">
-          <h2>新着記事・お役立ち情報</h2>
-          <a class="text-link" href="#articles">すべて見る
-            <svg aria-hidden="true"><use href="/assets/icons.svg#arrow-right"></use></svg>
-          </a>
-        </div>
+        <div class="section-heading-row"><h2>新着記事・お役立ち情報</h2><a class="text-link" href="/articles/">すべて見る<svg aria-hidden="true"><use href="/assets/icons.svg#arrow-right"></use></svg></a></div>
         <div class="article-grid">
-          <article class="article-card">
-            <img src="/assets/articles/food-saving.svg" alt="野菜と食材をイメージしたイラスト" width="640" height="400" loading="lazy">
-            <div><span class="article-tag tag-green">食費</span><h3>食費を節約する買い物のコツ</h3><p>無理なく続けられる食費節約のポイントを紹介します。</p><time datetime="2026-07-31">2026.07.31</time></div>
-          </article>
-          <article class="article-card">
-            <img src="/assets/articles/aircon.svg" alt="扇風機をイメージしたイラスト" width="640" height="400" loading="lazy">
-            <div><span class="article-tag tag-blue">光熱費</span><h3>エアコンの電気代を抑える方法</h3><p>設定温度や使い方の工夫で電気代を節約しましょう。</p><time datetime="2026-07-29">2026.07.29</time></div>
-          </article>
-          <article class="article-card">
-            <img src="/assets/articles/disaster.svg" alt="防災リュックと保存水をイメージしたイラスト" width="640" height="400" loading="lazy">
-            <div><span class="article-tag tag-green">防災</span><h3>防災備蓄の基本とポイント</h3><p>いざという時に備えるための備蓄の基本を解説します。</p><time datetime="2026-07-27">2026.07.27</time></div>
-          </article>
-          <article class="article-card">
-            <img src="/assets/articles/pool.svg" alt="家庭用プールをイメージしたイラスト" width="640" height="400" loading="lazy">
-            <div><span class="article-tag tag-gray">季節行事</span><h3>夏のプールにかかる費用まとめ</h3><p>プールの種類ごとの費用や水道代の目安を解説。</p><time datetime="2026-07-25">2026.07.25</time></div>
-          </article>
+          <a class="article-card" href="/articles/rice-monthly-guide/"><img src="/assets/articles/food-saving.svg" alt="お米と食材のイラスト" width="640" height="400" loading="lazy"><div><span class="article-tag tag-green">食費</span><h3>家族のお米は1か月に何kg必要？</h3><p>茶碗の杯数から月間消費量を考える方法を解説します。</p><time datetime="2026-07-31">2026.07.31</time></div></a>
+          <a class="article-card" href="/articles/electricity-cost-guide/"><img src="/assets/articles/aircon.svg" alt="扇風機のイラスト" width="640" height="400" loading="lazy"><div><span class="article-tag tag-blue">光熱費</span><h3>家電の電気代はどう計算する？</h3><p>W・時間・31円/kWhを使った計算式を解説します。</p><time datetime="2026-07-31">2026.07.31</time></div></a>
+          <a class="article-card" href="/articles/disaster-stockpile-guide/"><img src="/assets/articles/disaster.svg" alt="防災リュックと保存水のイラスト" width="640" height="400" loading="lazy"><div><span class="article-tag tag-green">防災</span><h3>防災備蓄は何日分必要？</h3><p>水・食料・携帯トイレの目安を公的基準から確認します。</p><time datetime="2026-07-31">2026.07.31</time></div></a>
+          <a class="article-card" href="/articles/pool-water-cost-guide/"><img src="/assets/articles/pool.svg" alt="家庭用プールのイラスト" width="640" height="400" loading="lazy"><div><span class="article-tag tag-gray">季節行事</span><h3>家庭用プールの水道代はいくら？</h3><p>サイズ別の水量と上下水道代の計算方法を解説します。</p><time datetime="2026-07-31">2026.07.31</time></div></a>
         </div>
       </div>
     </section>
@@ -326,28 +310,12 @@
 
   <footer class="site-footer">
     <div class="container footer-grid">
-      <div class="footer-brand">
-        <a class="brand" href="/">
-          <svg class="brand-mark" aria-hidden="true"><use href="/assets/icons.svg#logo"></use></svg>
-          <span>くらし算</span>
-        </a>
-        <p>暮らしに必要な量と費用を、かんたんに計算。<br>あなたの暮らしに役立つ情報をお届けします。</p>
-      </div>
-      <div><h2>計算ツール</h2><a href="#popular-tools">すべての計算ツール</a><a href="#popular-tools">人気の計算</a><a href="#popular-tools">新着の計算</a></div>
-      <div><h2>カテゴリ</h2><a href="#categories">食費・食材</a><a href="#categories">光熱費</a><a href="#categories">防災</a><a href="#categories">子育て</a><a href="#categories">季節行事</a><a href="#categories">住まい・引越し</a></div>
-      <div><h2>サポート</h2><a href="#how-it-works">使い方</a><a href="#trust">よくある質問</a><a href="mailto:contact@kurashi-calc.example">お問い合わせ</a></div>
-      <div><h2>その他</h2><a href="#trust">運営者について</a><a href="#trust">プライバシーポリシー</a><a href="#trust">利用規約</a><a href="/sitemap.xml">サイトマップ</a></div>
-    </div>
-    <div class="container footer-bottom">
-      <small>© 2026 くらし算 All Rights Reserved.</small>
-      <div class="social-links" aria-label="ソーシャルリンク">
-        <a href="#" aria-label="X"><span aria-hidden="true">𝕏</span></a>
-        <a href="#" aria-label="Instagram"><span aria-hidden="true">◎</span></a>
-        <a href="mailto:contact@kurashi-calc.example" aria-label="メール"><svg aria-hidden="true"><use href="/assets/icons.svg#mail"></use></svg></a>
-      </div>
-    </div>
+      <div class="footer-brand"><a class="brand" href="/"><svg class="brand-mark" aria-hidden="true"><use href="/assets/icons.svg#logo"></use></svg><span>くらし算</span></a><p>暮らしに必要な量と費用を、かんたんに計算。<br>計算式と参照元を公開して運営します。</p></div>
+      <div><h2>計算ツール</h2><a href="/tools/">すべての計算ツール</a><a href="/tools/rice/">お米</a><a href="/tools/electricity/">電気代</a><a href="/tools/pool-water/">プール水道代</a><a href="/tools/disaster-stockpile/">防災備蓄</a></div>
+      <div><h2>コンテンツ</h2><a href="/categories/">カテゴリ</a><a href="/articles/">お役立ち記事</a><a href="/search/">サイト内検索</a><a href="/sitemap.xml">XMLサイトマップ</a></div>
+      <div><h2>サポート</h2><a href="/about/#how-to-use">使い方</a><a href="/about/">運営者について</a><a href="/contact/">お問い合わせ</a></div>
+      <div><h2>ポリシー</h2><a href="/privacy/">プライバシーポリシー</a><a href="/terms/">利用規約</a><a href="https://github.com/TI-06/kurashi-calc" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+    </div><div class="container footer-bottom"><small>© 2026 くらし算 All Rights Reserved.</small><div class="social-links"><a href="/contact/" aria-label="お問い合わせ"><svg aria-hidden="true"><use href="/assets/icons.svg#mail"></use></svg></a></div></div>
   </footer>
-
-  <div class="toast" role="status" aria-live="polite" hidden data-toast></div>
 </body>
 </html>

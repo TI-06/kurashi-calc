@@ -6,7 +6,8 @@
   "scripts": {
     "test": "node --test tests/*.test.js",
     "serve": "python3 -m http.server 4173 -d public",
-    "deploy": "npx wrangler@latest deploy"
+    "deploy": "npx wrangler@latest deploy",
+    "check": "npm test && node --check public/assets/common.js && node --check public/assets/app.js && node --check public/assets/electricity-page.js && node --check public/assets/pool-page.js && node --check public/assets/disaster-page.js && node --check public/assets/search-page.js"
   },
   "engines": {
     "node": ">=22.16.0"
